@@ -21,7 +21,7 @@ if __name__ == '__main__':
     parser.add_argument("--network", default="voc12.resnet38_SEAM", type=str)
     parser.add_argument("--infer_list", default="voc12/train.txt", type=str)
     parser.add_argument("--num_workers", default=8, type=int)
-    parser.add_argument("--voc12_root", default='VOC2012', type=str)
+    parser.add_argument("--voc12_root", default='data/VOCdevkit/VOC2012', type=str)
     parser.add_argument("--out_cam", default=None, type=str)
     parser.add_argument("--out_crf", default=None, type=str) 
     parser.add_argument("--out_cam_pred", default=None, type=str)
