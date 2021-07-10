@@ -34,7 +34,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=8, type=int)
     parser.add_argument("--max_epoches", default=8, type=int)
-    parser.add_argument("--network", default="network.resnet38_SEAM", type=str)
+    parser.add_argument("--network", default="voc12.resnet38_SEAM", type=str)
     parser.add_argument("--lr", default=0.01, type=float)
     parser.add_argument("--num_workers", default=8, type=int)
     parser.add_argument("--wt_dec", default=5e-4, type=float)
@@ -84,9 +84,9 @@ if __name__ == '__main__':
     ], lr=args.lr, weight_decay=args.wt_dec, max_step=max_step)
 
     if args.weights[-7:] == '.params':
-        import network.resnet38d
+        import voc12.resnet38d
         assert 'resnet38' in args.network
-        weights_dict = network.resnet38d.convert_mxnet_to_torch(args.weights)
+        weights_dict = voc12.resnet38d.convert_mxnet_to_torch(args.weights)
     else:
         weights_dict = torch.load(args.weights)
 
