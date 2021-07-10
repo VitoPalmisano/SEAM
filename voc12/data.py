@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 import PIL.Image
 import os.path
 import scipy.misc
-from tool import imutils
+import imutils
 from torchvision import transforms
 
 IMG_FOLDER_NAME = "JPEGImages"
