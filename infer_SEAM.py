@@ -8,7 +8,7 @@ import scipy.misc
 import importlib
 from torch.utils.data import DataLoader
 import torchvision
-from tool import imutils, pyutils, visualization
+from voc12 import imutils, pyutils, visualization
 import argparse
 from PIL import Image
 import torch.nn.functional as F
