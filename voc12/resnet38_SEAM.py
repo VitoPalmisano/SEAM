@@ -5,10 +5,10 @@ import torch.nn.functional as F
 import numpy as np
 np.set_printoptions(threshold=np.inf)
 
-import network.resnet38d
-from tool import pyutils
+from .resnet38d import *
+from .pyutils import *
 
-class Net(network.resnet38d.Net):
+class Net(Net):
     def __init__(self):
         super(Net, self).__init__()
         self.dropout7 = torch.nn.Dropout2d(0.5)
