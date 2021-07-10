@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.sparse as sparse
 import torch.nn.functional as F
 
-import network.resnet38d
+import resnet38d
 import pyutils
 
 class Net(network.resnet38d.Net):
